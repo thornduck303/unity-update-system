@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "Update System",
     "description": "Custom update manager.",
-    "unity": "6000.2.10f1",
+    "unity": "6000.2",
     "author": {
         "name": "Murilo M. Grosso"
     }
