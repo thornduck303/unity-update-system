@@ -1,0 +1,10 @@
+{
+    "name": "com.thornduck.unityupdatesystem",
+    "version": "1.0.0",
+    "displayName": "Update System",
+    "description": "Instance update handler.",
+    "unity": "6000.2.10f1",
+    "author": {
+        "name": "Murilo M. Grosso"
+    }
+}

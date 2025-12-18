@@ -1,0 +1,7 @@
+{
+	"name": "ThornDuck.UpdateSystem.Editor",
+	"references": [
+		"ThornDuck.UpdateSystem"
+	],
+	"includePlatforms": ["Editor"]
+}
