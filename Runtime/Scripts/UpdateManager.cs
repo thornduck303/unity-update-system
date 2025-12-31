@@ -27,6 +27,9 @@ namespace ThornDuck.UpdateSystem{
         private readonly List<Action> pendingModifications = new();
         private readonly List<UpdatableEntity> updatableEntities = new();
 
+        [SerializeField]
+        public UpdateProfile DefaultUpdateProfile;
+
         private static readonly IComparer<UpdatableEntity> UpdatableEntityPriorityComparer =
             new UpdatableEntityPriorityComparer();
 

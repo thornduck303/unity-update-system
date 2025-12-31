@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpdateManager
   isRunning: 1
+  DefaultUpdateProfile: {fileID: 11400000, guid: d670ccbe29e8e12489bc4d205448e7de, type: 2}

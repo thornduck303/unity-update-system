@@ -21,12 +21,10 @@ namespace ThornDuck.UpdateSystem{
         public float DeltaTimeSeconds => deltaTimeSeconds;
         public UpdateProfile UpdateProfile => updateProfile;
 
-        protected virtual void Awake()
+        protected virtual async void Awake()
         {
             if(updateProfile == null)
-                updateProfile = Resources.Load<UpdateProfile>(
-                    "UpdateProfiles/default_updateprofile"
-                );
+                updateProfile ??= UpdateManager.Instance.DefaultUpdateProfile;
         }
 
         protected virtual void OnEnable()
