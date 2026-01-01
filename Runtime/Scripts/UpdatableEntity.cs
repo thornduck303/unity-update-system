@@ -21,12 +21,6 @@ namespace ThornDuck.UpdateSystem{
         public float DeltaTimeSeconds => deltaTimeSeconds;
         public UpdateProfile UpdateProfile => updateProfile;
 
-        protected virtual async void Awake()
-        {
-            if(updateProfile == null)
-                updateProfile ??= UpdateManager.Instance.DefaultUpdateProfile;
-        }
-
         protected virtual void OnEnable()
         {
             TryRegister();
@@ -35,13 +29,19 @@ namespace ThornDuck.UpdateSystem{
         private void TryRegister()
         {
             if (UpdateManager.Instance != null)
+            {
+                if(updateProfile == null)
+                    updateProfile = UpdateManager.Instance.DefaultUpdateProfile;
                 UpdateManager.Instance.RegisterUpdatableEntity(this);
+            }
             else
                 UpdateManager.OnInstanceInitialized += OnUpdateManagerReady;
         }
 
         private void OnUpdateManagerReady()
         {
+            if(updateProfile == null)
+                updateProfile = UpdateManager.Instance.DefaultUpdateProfile;
             UpdateManager.Instance.RegisterUpdatableEntity(this);
             UpdateManager.OnInstanceInitialized -= OnUpdateManagerReady;
         }
