@@ -68,6 +68,6 @@ Entities are automatically sorted by priority. Higher priority entities update f
 Changing priority at runtime automatically reinserts the entity in the correct order.
 
 ## Notes
-> Use ```OnStartEntity()``` and ```OnUpdateEntity()``` instead of ```Start()``` and ```Update()```.
+Use ```OnStartEntity()``` and ```OnUpdateEntity()``` instead of ```Start()``` and ```Update()```.
 
-> ```DeltaTimeSeconds``` replaces ```Time.deltaTime```.
+```DeltaTimeSeconds``` replaces ```Time.deltaTime```.
